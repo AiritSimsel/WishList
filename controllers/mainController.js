@@ -44,7 +44,7 @@ exports.postNewWish = (req, res) => {
 };
 
 exports.deleteWish = (req, res) => {
-    const checkedWishId = req.body.checkbox;
+    const checkedWishId = req.body.button;
 
     WishFromMongo.findByIdAndDelete(checkedWishId, (error) => {
         if(!error){

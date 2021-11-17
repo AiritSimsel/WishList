@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/72db12224a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>Document</title>
 </head>
 <body>
@@ -13,15 +15,15 @@
 
     <div class="box">
         <% for(let i = 0; i < myWish.length; i++) { %>
-            <form action="/delete" method="POST">
-                <div class="item">
-                    <input type="checkbox" value="<%= myWish[i].id %>" name="checkbox" onchange="this.form.submit()" >
-                    <p><%= myWish[i].item %></p>
-                </div>
+            <form action="/delete" method="POST">             
+                <p>
+                    <%= myWish[i].item %>&#160;&#160;&#160;&#160;
+                    <button name="button" value="<%= myWish[i].id %>" onclick="this.form.submit()"><i class="fas fa-trash-alt"></i></button>
+                </p>
             </form>
         <% } %>
-
     </div>
+
     <div class="box">
         <form action="/form" class="class" method="post">
             <input type="text" name="newWish" placeholder="Add New Wish">
