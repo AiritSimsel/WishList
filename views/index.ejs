@@ -7,16 +7,22 @@
     <link rel="stylesheet" href="./styles/styles.css">
     <title>Document</title>
 </head>
-<body>
-    <div class="box" id="heading">
-        <h1>Wishlist <%=date%> </h1>
+<body class="bg-red-50">
+    <div class="text-center font-sans">
+        <h1 class="text-4xl font-bold  text-blue-300 py-12">Wishlist</h1>
+        <h1 class="text-3xl text-blue-200">🌤<%=date%></h1>
     </div>
-        <div class="box">
+        <div class="mt-4">
             <% for(let i = 0; i < myWish.length; i++) { %>
             <form action="/" method="post">
-               <p> <%= myWish[i].item %> </p>
+               <li class="list-disc text-2xl text-center text-blue-400 py-2 font-sans"> <%= myWish[i].item %> </li>
             </form>
         </div>
         <% } %>
+        
+        <div class="font-sans text-blue-300 text-3xl mt-80 ml-10 hover:bg-red-100"> 
+            <a href="http://localhost:3000/admin">MAKE A WISH...🌟</a>            
+        </div>
+        
 </body>
 </html>
